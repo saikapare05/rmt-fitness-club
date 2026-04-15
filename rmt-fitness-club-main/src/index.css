@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 30% 6%;
+    --foreground: 0 0% 95%;
+
+    --card: 228 25% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 228 25% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 235 60% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 228 20% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 228 15% 18%;
+    --muted-foreground: 228 10% 55%;
+
+    --accent: 0 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 228 15% 18%;
+    --input: 228 15% 18%;
+    --ring: 235 60% 40%;
+
+    --radius: 0.5rem;
+
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+
+    --gradient-brand: linear-gradient(135deg, hsl(235 60% 25%), hsl(235 80% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(0 75% 55%), hsl(20 90% 55%));
+    --gradient-dark: linear-gradient(180deg, hsl(228 30% 6%), hsl(228 25% 10%));
+    --shadow-glow: 0 0 30px hsl(235 60% 25% / 0.4);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+
+    --sidebar-background: 228 25% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 235 60% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 228 20% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 228 15% 18%;
+    --sidebar-ring: 235 60% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient-brand {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-gradient-brand {
+    background: var(--gradient-brand);
+  }
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+}
